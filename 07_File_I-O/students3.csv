@@ -1,0 +1,18 @@
+name,home
+Harry,"Number four,private drive"
+Ron,The burrow
+Draco,Malfoy Manor
+
+#this works even if we do this
+
+home,name
+"Number four,private drive",Harry
+The burrow,Ron
+Malfoy Manor,Draco
+
+#if the file is like this
+home,name,house
+"Number four,private drive",Harry,gryffindor
+The burrow,Ron,gryffindor
+Malfoy Manor,Draco,slytherin
+#and if we run the code it will still work normally ignoring the 3rd colounm.It will print for 2 colounms only.This is what makes this fxn OP
