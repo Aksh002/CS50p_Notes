@@ -33,7 +33,7 @@ def meow(n:int):
         print("Meow")
 number=input("Number: ")
 meow(number)
-#on prompting "mypy <file_name>", we will get the out put as 
+#on prompting "mypy <file_name>", we will get the out put as  
     """
     C_meows.py:35: error: Argument 1 to "meow" has incompatible type "str"; expected "int"  [arg-type]
     Found 1 error in 1 file (checked 1 source file)
@@ -104,7 +104,6 @@ number:int =int(input("Number: "))
 meo:str =meow(number)
 print("cat: ",meo,end="")
 
-'''
 #To modify this program to take the input frm the command line itself
 import sys
 if len(sys.argv)==1:
@@ -116,3 +115,27 @@ elif len(sys.argv)==3 and sys.argv[1]=="-n":
         print("meow")
 else:
     print("Usage: C_meows.py")
+
+#simillarly we can declare many flags like -a,-b,...etc. and we can also decide there order too.Things can get pretty complex pretty quickly
+#To fix that, we can use library named "argparse"
+'''
+
+#                           ARGPARSE
+#SOURCE- docs.python.org/3/library/argparse.html
+
+import argparse
+parser=argparse.ArgumentParser()
+#Above one is the Constructor for a Class named ArgumentParser of argparse library 
+parser.add_argument("-n")
+#add_argument is a method of this class
+args=parser.parse_args()
+#This method parse_args will automatically search for esys.argv for me, this fxn will import sys,look for sys.argv and figuire out where -n or anything actually is
+#We now hv this obj named args which contain all the values of command line arguments,no matter what order they appeared in(here its only single -n)
+for _ in range(int(args.n)):
+    print("Meow")
+#this will work fine if the command will include "-n", if its not it will give error like  -  "TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'"
+#in python, if we type "python <filename> -h(or --help)",we will see sm kind of usage information, if we add discription to our Argumentparser and add an argument named "help=no. of times to meow"to add_argument fxn,now u can see the quick explaination on 
+    
+
+
+#

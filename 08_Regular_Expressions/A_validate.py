@@ -1,5 +1,5 @@
 #Regular expression(Regex) is a pattern used to match whether the input given is of the required form or not.Like did they reallly typed the email, is it in correct form
-'''
+
 # @?
 email=input("Whats your email? :").strip()
 if "@" in email:
@@ -19,7 +19,7 @@ else:
 #More logical
 email=input("Whats your email? :").strip()
 username,domain=email.split("@")
-if username and "." in domain:   #These 2 r 2 different boolean expressions, dont get confused with english
+if (username) and ("." in domain):   #These 2 r 2 different boolean expressions, dont get confused with english
     print("Valid")   #when username=True
 else:
     print("Invalid")
@@ -53,7 +53,7 @@ else:
 
 
 
-#    .  =  any charachter excelt new line
+#    .  =  any charachter except new line
 #    *  =  0 or more repitition
 #    +  =  1 or more repition
 #    ?  =  0 or 1 repitition
@@ -188,7 +188,7 @@ if re.search(r"^\w+@\w+\.(edu|com|gov|in)$",email):
 else:
 
 #to also allow whitespaces in the input
-import re
+    import re
 email=input("Whats your email?").strip()  
 if re.search(r"^(\w|\s)+@\w+\.edu$",email):  
     print("Valid")
@@ -217,9 +217,9 @@ if re.search(r"^\w+@\w+\.\w+\.edu$",email):
     print("Valid")
 else:
     print("Invalid")
-#But by this method a new problem arrises that our code will not work if the input is "akshit.manipal.edu"
+#But by this method a new problem arrises that our code will not work if the input is "akshit@manipal.edu"
 #So this method CAN NOT BE APPLIED
-''' 
+
 #It can be fixed by using "?" as it meanes 0 or 1 repitition 
 import re
 email=input("Whats your email?").strip()  

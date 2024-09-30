@@ -9,13 +9,14 @@ class Student:
     def __str__(self):
         return f"{self.name} is from {self.house}"
     @classmethod
+    # Declaring this fxn as propert is necessary because otherwise we gotta construct an object in order to call get fxn which in the end creates another object, which doesnt make sense
     def get(cls):
         name=input("name: ")
         house=input("House: ")
         return cls(name,house)  #return Student(name,house)
-        #This cls() used above is a features of oops that u can now instentiate a student obj just using cls thats passed in.We can technically use Student() also bit cls is much safe
+        #This cls() used above is a features of oops that u can now instentiate a student obj just using cls thats passed in.We can technically use Student() also but cls is much safe
         #This above line means create an obj of the current class,whatever cls is,which is Here gonna be Student.It is initaillise withname and house
-#This is by nature of class in oops, all student specific fxnality
+#This is by nature of class in oops, all student specific fxnality 
 def main():
     student=Student.get()
     print(student)    

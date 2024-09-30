@@ -1,5 +1,6 @@
-#Basics of if,else,elif
 '''
+#Basics of if,else,elif
+
 #use of or and !=/==
 x=float(input("x="))
 y=float(input("y="))

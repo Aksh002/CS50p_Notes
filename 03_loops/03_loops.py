@@ -25,7 +25,6 @@ while i<3:
     print ("meow")
     i+=1
 
-
 #            FOR LOOP
 #LIST- its another datatype which is a way of containing multiple values all in the same varieble
 for i in [0,1,2]:
@@ -145,7 +144,7 @@ for student in students:
 for student in students:
     print(student,students[student],sep=" - ")
 
-#Lists of dictionaries
+#                 Lists of dictionaries
 #to associate multiple things with students
 students=[
     {"name":"Hermoine","house":"Griffindor","patronus":"otter"},
@@ -156,10 +155,11 @@ students=[
 #[] brackets represent its a list 
 #{} brackets represent its a dictionary
 #so hermoine dictionary has 3 keys-name,house,patronus. And it has 3 values/defination which are-hermoine,gryffindor,otter
-#for student in students:
-#    print(student["name"],student["house"],student["patronus"],sep=" - ")
+for student in students:
+    print(student["name"],student["house"],student["patronus"],sep=" - ")
 #1st version associated students names their houses,in the next version,we standardize the names of our keys to be name,house,patronus,and the values of those keys is our data like....
 
+# When looping through dictionaries, the key and corresponding value can be retrieved at the same time using the items() method.
 
 #                NESTED LOOPS
 def main():
@@ -213,4 +213,5 @@ for i in x:
     for z in i:
         print(z)
 '''
-
+#abs is used to print positive part of negative no.
+#fabs is used to print positive part of negative float number

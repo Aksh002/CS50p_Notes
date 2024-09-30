@@ -50,3 +50,31 @@ values = list(data.values())
 print(courses)
 '''
 
+class Wizzard:
+    def __init__(self,name):       #initialisation method getting initialise with name only
+            if not name:
+                raise ValueError("Missing name")
+            self.name=name
+
+#To tell the file that a student is a wizard and a proffesor is a wizzard,we do this
+class Student(Wizzard):
+#A student inherits frm or a subclass of wizard.wizard is basically superclass of the student class.It will inherit the charachteristics of wizard
+    def __init__(self,name,house):
+        #since both classes hv init method that r gonna called,to use the fxnality in the wizard class' init method
+        super().__init__(name)
+        #super is used for accessing current class's parent class 
+        self.house=house
+
+class Professor(Wizzard):
+    def __init__(self,name,subject):
+        super().__init__(name)
+        self.subject=subject
+#whats nice is that wizard as a class is now taking care of all the assignment of wizard's name
+#student is inheriting and using all that fxnality by calling superclass's own init method,also additionally taking house
+
+
+wizzard=Wizzard("Albus")
+student=Student("Harry","Gryffindor")
+professor=Professor("Severus","Defense against the dark arts")
+
+print(wizzard.name,"\n",student.name,"\n",professor.name)    

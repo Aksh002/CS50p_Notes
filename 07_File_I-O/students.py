@@ -1,8 +1,9 @@
-'''
+
 with open("students.csv") as file:
     for line in file:
         row=line.rstrip().split(",") #each line in the csv file is taken as a row and each of the values seperated by commas is taken as coloumns
         print(f"{row[0]} is in {row[1]}")
+
 #Effective Way 
 with open("students.csv") as file:
     for line in file:
@@ -19,15 +20,16 @@ with open ("students.csv") as file:
 for student in sorted(students):
     print(student)
 
-#here we are not sorting by name,we r sorting by sentences.
+#here we are not sorting by name,we r sorting by sentences.We r lucky that first word is name
+
 #SO to sort by name-
 students=[]
 with open ("students.csv") as file:
     for line in file:
         name,house=line.rstrip().split(",")
-#here we create a local library to associate 2 values of students and house together
+#here we create a local dictionary to associate 2 values of students and house together
         student={} #this will have 2 keys
-#Or can use student={"name":name,"house":house} instead of line 29,31,32
+#Or can use student={"name":name,"house":house} instead of line above and 2 lines below
         student["name"]=name
         student["house"]=house
         students.append(student)
@@ -51,7 +53,8 @@ for student in sorted(students,key=get_name,reverse=True):
 #same can be sorted wrt house
 #we are not using "()" with getname bcs we want sorted fxn to call getname
 #as we are defining the fxn and immediately using it,but never needing it in the future,we can also use "lambda" fxn as a short replacement of that fxn,its implemented like this
-'''
+#if you have a list of dictionaries and you want to sort them by a specific key in the dictionaries, you need to provide a function that extracts that key
+
 #                    LAMBDA Fxn
 #its an annonomous fxn that tells pyhton,"hey python, there is this fxn, it has no name",that fxn takes a perimeter,here its student, bcs this fxn is called on every dictionary(named student) of that list,as we are sorting abt names if student, we will index in dictionary and access return names,which r gonna be the key here
 students=[]

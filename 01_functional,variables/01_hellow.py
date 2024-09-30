@@ -15,7 +15,7 @@ print("hellow,", x,sep="!!!")
 
 #to print quotes 
 print('"hellow,"')
-print("hello, \"vro\"")
+print("hello, \"vro\"") 
 
 #new way to print
 x=input("whats your name?")
@@ -112,7 +112,7 @@ hellow(name)
 #diff syntax assigning argument a value
 def hellow(to="world"):
     print("hello,",to)
-hello()
+hellow()
 #this will print hello world only, even if user input name
     
 name=input("Whats ur name?")
@@ -146,7 +146,7 @@ def main():
 def square(n):
     return n*n #(we can use 'n**2' or 'pow(n,2)' to do the same here)
 main()
-'''
+
 
 
 #                 END   
@@ -155,3 +155,4 @@ x=input("whats your name?")
 first,secound,last=x.split(" ")
 #fxn split objects about what u provide bw double coats
 print(first,"...",secound,"...",last)
+'''

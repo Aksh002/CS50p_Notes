@@ -1,4 +1,4 @@
-'''
+
 #list
 names=[]
 for _ in range(3):
@@ -14,7 +14,7 @@ for name in sorted(names):
 #Resource- docs.python.org/3/library/functions.html#open
 name=input("Whats ur name?=")
 file=open("names.txt","w")
-#open returns a file handle, a special value that allows me to access that file subsiquently,thats why use will store in file variable
+#open returns a "file handle", a special value that allows me to access that file subsiquently,thats why use will store in file variable
 file.write(name)
 file.close()
 #type "python names.py" in terminal to run the code and the store the value,then type code "names.txt" in terminal to open the txt file u just created by running the program and giving the input data
@@ -27,6 +27,7 @@ name=input("Whats ur name?=")
 file=open("names.txt","a")
 
 file.write(f"{name}\n")
+
 #We wrote thi code this way bcs we want all names in seperate lines,if we use code we used in last one, we'll end up with all names written in same line without any space or line break
 
 file.close()
@@ -71,7 +72,7 @@ with open("names.txt") as file: #If u are opening a file to read it u dont need 
 #Till here,in our code we stored all the names of the names.txt file to the list named names
 for name in sorted(names):
     print(f"hello,{name}") 
-'''
+
 #Efficient way
 with open("names.txt") as file: #If u are opening a file to read it u dont need to specify "r"
     for line in sorted(file):
@@ -80,3 +81,15 @@ with open("names.txt") as file: #If u are opening a file to read it u dont need 
 with open("names.txt") as file: #If u are opening a file to read it u dont need to specify "r"
     for line in sorted(file,reverse=True):
         print("hello",line.rstrip())
+
+
+#                                       Coursera
+
+file=open("names.txt","a")
+name=file.name              # Will fetch name
+
+mode=file.mode
+
+firstline=file[0]
+secoundline=file[1]
+# Lines are stored in a list

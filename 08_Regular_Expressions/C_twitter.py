@@ -1,5 +1,5 @@
 #Here we try to extract username frm users url.
-'''
+
 url=input("URL: ").strip()
 username=url.replace("https://twitter.com/","")
 print(f"username: {username}")
@@ -10,6 +10,7 @@ username=url.removeprefix("https://twitter.com/","")
 print(f"username: {username}")
 
 #no matter how many python fxn we use, it can never be perfect as it will be with regular exp
+
 #re.sub= substitute,form= re.sub(pattern,repl,string,count=0,flags=0), count means how many time u want to find and replace
 
 import re 
@@ -32,7 +33,7 @@ url=input("URL: ").strip()
 username=re.search(r"^https?://(?:www\.)?twitter\.com/(.+)$",url,re.IGNORECASE)
 if username:
     print(f"username:",username.group(1))
-'''
+
 #acc to twitter
 import re
 url=input("URL: ").strip()

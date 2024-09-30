@@ -1,4 +1,4 @@
-
+'''
 #          Syntax Error
 #error in the structure of the code, gotta find it and fix urself manually
 

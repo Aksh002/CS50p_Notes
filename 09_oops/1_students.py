@@ -1,12 +1,12 @@
 #OOPs is basically a way to solve large problems
-'''
+
 def main():
     name=get_name()
     house=get_house()
     print(f"{name} from {house}")
 
 def get_name():
-    return input("name; ")
+    return input("name: ")
 def get_house():
     return input("house: " )
 
@@ -40,9 +40,8 @@ def main():
 def get_student():
     name=input("name: ")
     house=input("house: ")
-#one of going frm here is making a dictionary of both of them
-#another way
     return name,house 
+    # Here fxn return a tuple of name n house
 if __name__=="__main__":
     main()
 
@@ -56,7 +55,7 @@ def main():
 def get_student():
     name=input("name: ")
     house=input("house: ")
-    return name,house 
+    return name,house
 if __name__=="__main__":
     main()
 #This will give typeError saying that tupple obj doesnt support item assignment.
@@ -70,7 +69,9 @@ def main():
 def get_student():
     name=input("name: ")
     house=input("house: ")
-    return [name,house]   #now its a list
+    return [name,house]   
+    #now it returns a list
+
 if __name__=="__main__":
     main()
 
@@ -117,8 +118,8 @@ if __name__=="__main__":
     main()
 
 #                  classes
-#its a general purpose tool which helps us to create our own dataTypes and give them name
-#its kind of mould that can define and give a name
+#its a general purpose tool which helps us to create tour own dataTypes and give them name
+#its kind of mould that can define and give a name,object is what is mae out of that mold
 #source- docs.python.org/3/tutorial/classes.html
 class Student:    #This is enough to create a datatype
     ...                    #... is a placeholder that indicates that ill come back to it later
@@ -141,13 +142,13 @@ if __name__=="__main__":
 #attributes(here were house and name ) can also be called instance variables as they r nothing but variables inside of an object whose type is student
 #atrributes variables can store values of any datatype
 
- 
 #In classes,unlike in dict,we can specify/standardise what those attributes can be and what kind values u can set them to
 
+#Till now what we did is we declare an obj of a class and then store input value in the instance variable of that obj. Now what we will do is we take the name and house as input and pass them as argument for constructor call, this will pass those args in class and perform the fxn present in class which is storing them in attributes, while making an object of em.This will give us morre control
 class Student:
 #there r not just Attributes/instance-variable that can be put inside in the class, u can also add methods.Methods are fxns in classes that behave in a special way.Thses methods allow you to determine behaviour of contents object in the standard way
-    def __init__(self,name,house):  #it is called of automatically by the python
-    #  __init__ = instance method  -  it is defined to initiallise the contents of an object from a class
+    def __init__(self,name,house):  
+    #  __init__ = instance method  -  it is defined to initiallise the contents of an object from a class   #it is called of automatically by the python
         self.name=name
         #here we are crating a new atrribute/instance variable to store the name and house passed init. we can also write "self.n=name".Its like installing name and house into the empty obj which was is created and storing them in attributes/instance variables in the object  
         self.house=house
@@ -269,10 +270,11 @@ def get_student():
     return Student(name,house,patronus)
 if __name__=="__main__":
     main()
-'''
+
 #              PROPERTIES
 #an attribute to hv more control
 #decorators-these r fxn used to modify the fxn of other fxns
+#Basically the issue here is there is a way to circumvent the error checking put in place in init method,if the idiot who writes the code did shit like- "studnt.name="Number four,pivot drive",oobj. attribute can actually be overwritten and bypass the check, to prevent this, to prevent this,what we do is if one want to access an attribute, one has to go sm fxn(getter) and to set an attribute, u hv to go through some fxn.
 class Student:
     def __init__(self,name,house):
         self.name=name
@@ -303,7 +305,7 @@ class Student:
     def name(self,name):
         if not name:
             raise ValueError("Missing name")
-        self_name=name
+        self._name=name
 
 def main():
     student=get_student()

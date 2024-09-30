@@ -39,13 +39,4 @@ for card in cards:
 import statistics
 print(statistics.mean([100,90]))
 '''
-#            Command-line Arguments
-#                SYS MODULE
-#sys.argv(argument v)-argv is a pre existing variable, its a list of all of the words that a human typed in the prompt window before they hit enter  
-import sys
-print("hello,my name is ",sys.argv[1])
-#then type "python 05_libraries.py akshit" in command prompt to execute the program
-#here, sys.argv makes a list of all the material(including file name) typed in the command prompt,thus by fetching i=1 element(2nd element) from the list will give us name as the 2nd material provided in the command prompt is name
-#its like getting output of printing name tag whenever user wants
 
-#if you do not write your name in command promopt, it meanes you will not provide no value at the position i=1 in set, thus it will show index error as you are fetching something that doesnt exist

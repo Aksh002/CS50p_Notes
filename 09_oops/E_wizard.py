@@ -1,6 +1,6 @@
 #                  INHERITANCE
 # By oops,we hv opportunity to design our classes in a hierarchichal fashion,where u can hv one class inherit frm or borrow sttributes that is methods or variables frm another class if they all hv those in comman.
-'''
+
 class Student:
     def __init__(self,name,house):
         if not name:
@@ -17,8 +17,8 @@ class Professor:
         self.subject=subject
 
 #this way of writting multiple classes repeating same shit is pretty ineffientNot to mention if we add error checking to it.
-    #Solution to this provided by oops as inheritance,where u can define multiple classes that somehow relate to one another.They dont even need to be parallel like they r here.There could be some hierarchy b/w them.
-    #Since both students and professor are wizards in harry potter world,we can introduce a Class named wizard where we can hv any of the common attributes b/w students and professor  
+#Solution to this provided by oops as inheritance,where u can define multiple classes that somehow relate to one another.They dont even need to be parallel like they r here.There could be some hierarchy b/w them.
+#Since both students and professor are wizards in harry potter world,we can introduce a Class named wizard where we can hv any of the common attributes b/w students and professor  
 
 class Wizzard:
     def __init__(self,name):       #initialisation method getting initialise with name only
@@ -48,7 +48,7 @@ student=Student("Harry","Gryffindor")
 professor=Professor("Severus","Defense against the dark arts")
 
 print(wizzard.name,"\n",student.name,"\n",professor.name)    
-'''
+
 #We can hv multi level inheritance also
 
 #ValueError we hv studied so far has a superclass named Exception,which also has super super Class named Base exception,all the errors under Exception are all different but hold a common fxnality with parent "Exception".So u can basically handle Parrent error(Exception) also with try-except method u do for Valueeror

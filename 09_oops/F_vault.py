@@ -1,4 +1,4 @@
-'''
+
 #        OPERATOR OVERLOADING
 #"+" was not just used to add intiger,it was also used for concatination, to join 2 strings,for adding to a list in python
 #similarly we can use simple operators for different operations
@@ -24,7 +24,7 @@ knuts= potter.knuts + weasley.knuts
 
 total= Vault(galleons,sickles,knuts)
 print(total)
-'''
+
 #now we can use overloading the operator + to add two basically objects potter and weasley.If we do it casuallly/normally, it will show "TypeError:unsupported opperand types for 'vault' and 'vault'" 
 #To execute this we use special method     -      object.__add__(self,other)
 #Source - docs.python.org/3/reference/datamodel.html#special-method-names
